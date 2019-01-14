@@ -23,5 +23,18 @@ def accumulating(a)
 	end
 end
 
-accumulating(144)
+def my_fib(a)
+    i=0
+    first = 0
+    second = 1
+    while i<=a
+        puts first+second
+        j = first+second
+        first = second
+        second = j
+        i+=1
+    end
+end
+
+my_fib(10)
 
