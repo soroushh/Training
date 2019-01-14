@@ -17,3 +17,6 @@ EIGHT = 8
 NINE = 9
 
 TEN = 10
+
+puts FOUR + FIVE
+
