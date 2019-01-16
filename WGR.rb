@@ -15,8 +15,10 @@ class Person
   end
 end
 
-fh = File.open("helloWorld.rb","r")
+obj = Object.new()
 
-puts fh.read()
+def obj.new()
+  puts "A new object is made."
+end
 
-fh.close()
+obj.new()
