@@ -1,8 +1,5 @@
 class Person
-
-
   attr_reader :adress , :name
-
   def initialize(name)
     @name = name
     self.class.all << self
@@ -35,17 +32,12 @@ Person.all.each{
   puts x
 }
 
-=======
-end
-Person.all.each{
-  |x|
-  puts x
-}
-
 for i in Person.all
   puts i.name()
 end
 puts Person.superclass()
 
 puts Person.superclass.superclass()
+
+
 
