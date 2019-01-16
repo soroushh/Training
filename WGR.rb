@@ -1,43 +1,34 @@
 class Person
-  attr_reader :adress , :name
-  def initialize(name)
+  @@all = []
+  def initialize(name , family)
     @name = name
-    self.class.all << self
+    @family = family
   end
-  def address=(a)
-    @adress = a
+  def self.add
+    puts "Please enter the name"
+    name = gets.chomp()
+    puts "family?"
+    family = gets.chomp()
+    @@all << self.new(name , family)
   end
-  def address
-    @adress
-  end
-  def self.all
-    @all ||= []
+  def self.show_all
+    @@all
   end
   def to_s
-    "The name of the object is #{@name}"
+    "The full name of the person is #{@name} #{@family}"
+
   end
 end
-puts "Please enter the name of persons?"
+puts "Please enter the number of persons you want to make."
 
-while true
-  name = gets.chomp()
-  if name == "stop"
-    break
-  else
-    Person.new(name)
-  end
+
+number = gets.chomp.to_i
+
+counter = 0
+
+while counter < number
+  Person.add
+  counter +=1
 end
-Person.all.each{
-  |x|
-  puts x
-}
 
-for i in Person.all
-  puts i.name()
-end
-puts Person.superclass()
-
-puts Person.superclass.superclass()
-
-
-
+puts Person.show_all
