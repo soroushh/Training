@@ -18,17 +18,11 @@ class Person
     "The full name of the person is #{@name} #{@family}"
 
   end
+  def method_missing(a, *b)
+    puts "The method with the name of #{a} does not exist."
+  end
 end
-puts "Please enter the number of persons you want to make."
+person = Person.new("soroush","khosravi")
 
+person.unknown()
 
-number = gets.chomp.to_i
-
-counter = 0
-
-while counter < number
-  Person.add
-  counter +=1
-end
-
-puts Person.show_all
