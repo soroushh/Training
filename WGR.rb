@@ -15,12 +15,8 @@ class Person
   end
 end
 
-person_1 = Person.new("soroush", "khosravi")
+fh = File.open("helloWorld.rb","r")
 
-person_2 = Person.new("farnaz","Ostovari")
+puts fh.read()
 
-Person.all.each{
-  |x|
-  puts x 
-}
-
+fh.close()
