@@ -15,10 +15,16 @@ class Person
   end
 end
 
-obj = Object.new()
+puts "Please enter the method's name!"
 
-def obj.new()
-  puts "A new object is made."
+method = gets.chomp()
+
+str = "a string"
+
+if str.respond_to?(method)
+  puts "The respond is #{str.send(method)}"
+else
+  puts "The string does not respond to the method!"
 end
 
-obj.new()
+
