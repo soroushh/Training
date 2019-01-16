@@ -15,16 +15,18 @@ class Person
   end
 end
 
-puts "Please enter the method's name!"
-
-method = gets.chomp()
-
-str = "a string"
-
-if str.respond_to?(method)
-  puts "The respond is #{str.send(method)}"
-else
-  puts "The string does not respond to the method!"
+def args(a,b=2,*c,d)
+  puts "a is #{a}, b is #{b} and c is #{c} and d is #{d}"
 end
+
+args(1,3)
+
+args(1,3,4)
+
+args(1,3,4,5)
+
+
+
+
 
 
