@@ -1,42 +1,28 @@
+# Showing instance variables
+
 class Person
-  attr_reader :adress , :name
-  def initialize(name)
+  @@all = []
+  def initialize(name , family)
     @name = name
-    self.class.all << self
-  end
-  def address=(a)
-    @adress = a
-  end
-  def address
-    @adress
-  end
-  def self.all
-    @all ||= []
+    @family = family
+    @@all << self
   end
   def to_s
-    "The name of the object is #{@name}"
+    return "The person is #{@name} #{@family}."
+  end
+  def self.all
+    @@all
   end
 end
-puts "Please enter the name of persons?"
 
-while true
-  name = gets.chomp()
-  if name == "stop"
-    break
-  else
-    Person.new(name)
-  end
+def args(a,b=2,*c,d)
+  puts "a is #{a}, b is #{b} and c is #{c} and d is #{d}"
 end
-Person.all.each{
-  |x|
-  puts x
-}
 
-for i in Person.all
-  puts i.name()
+def method(a)
+  puts a
 end
-puts Person.superclass()
 
-puts Person.superclass.superclass()
+puts a 
 
 
