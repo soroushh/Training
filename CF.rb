@@ -7,12 +7,27 @@ class Array
       i+=1
     end
   end
+  def my_map
+    c =0
+    ar = []
+    size = self.length
+    while c<size
+      ar << yield(self[c])
+      c +=1
+    end
+    return ar
+  end
 end
 
-a = [1,2,3,4]
+ar = [1,2,3,4]
 
-a.my_each{
+b = ar.my_map{
   |x|
-  puts x**4
+  x**2
+
 }
+p b 
+
+
+
 
