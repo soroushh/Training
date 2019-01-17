@@ -12,10 +12,21 @@ class Person
   def to_s
     " #{hash[:name]} #{hash[:family]}"
   end
+  def Person.family(a)
+    ar = []
+    for i in self.all
+      if i.hash[:family] == a
+        ar << i
+      end
+    end
+    return ar
+  end
 end
 
-person_1= Person.new("soroush", "khosravi")
+p1 = Person.new("soroush","khosravi")
 
-person_2= Person.new("farnaz","ostovari")
+p2 = Person.new("rostam","khosravi")
 
-puts Person.all
+p3 = Person.new("katayoun","yazdani")
+
+p4 = Person.new("farnaz","khosravi")
