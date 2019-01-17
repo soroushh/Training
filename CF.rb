@@ -1,12 +1,10 @@
-x = 10
-
-loop do
-  puts x
-  x -= 1
-  if x==5
-    break
-  end
+def y(a,b)
+  yield(a,b)
 end
 
+y("soroush","farnaz"){
+  |x,y|
+  puts "The first argumenent is #{x} and the second argument is #{y}."
+}
 
 
