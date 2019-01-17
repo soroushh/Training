@@ -1,10 +1,18 @@
-def y(a,b)
-  yield(a,b)
+class Array
+  def my_each
+    size = self.length
+    i = 0
+    while i < size
+      yield(self[i])
+      i+=1
+    end
+  end
 end
 
-y("soroush","farnaz"){
-  |x,y|
-  puts "The first argumenent is #{x} and the second argument is #{y}."
-}
+a = [1,2,3,4]
 
+a.my_each{
+  |x|
+  puts x**4
+}
 
