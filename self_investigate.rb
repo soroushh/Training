@@ -1,22 +1,10 @@
-class C
-  def self.x
-    puts "In the x method"
-  end
-  def self.y
-    puts "In y method."
-    x
-  end
-end
-def top
-  puts " hey"
-end
-
-class C
-  def cl
-    self.top
+def x(a , b = false)
+  y = a
+  puts y
+  if b == true
+    x("farnaz")
+    puts y 
   end
 end
 
-obj = C.new()
-
-obj.cl()
+x("soroush" , true)
