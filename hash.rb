@@ -1,18 +1,5 @@
-hash = {
-  "soroush" => "farnaz",
-  "rostam" => "katayoun",
-  "sohrab" => "farah"
-}
-a = hash.reject{
-  |x,y|
-  y > "g"
-}
+def hashing(a,b)
+  puts b["name"]
+end
 
-p a 
-
-b = hash.select{
-  |x,y|
-  y > "g"
-}
-
-p b 
+hashing("a","name"=>"soroush")
