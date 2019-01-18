@@ -1,23 +1,13 @@
-class Person
-  attr_reader :hash
-  def initialize()
-    @hash = {}
-  end
-  def set_name=name
-    @hash[:name]=name
-  end
-  def set_sport=sports
-    @hash[:sports] = sports
-  end
-  def to_s
-    @hash
-  end
-end
+string = "a string"
 
-person = Person.new()
+puts string.respond_to?(:upcase)
 
-person.set_name=["sorous","khosravi"]
+puts string.methods.include?(:upcase)
 
-person.set_sport=["ping pong", "basketball"]
+puts string.send(:upcase)
 
-puts person.hash
+puts string.send("upcase")
+
+puts string.respond_to?("upcase")
+
+puts string.methods.include?("upcase")
