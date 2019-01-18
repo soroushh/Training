@@ -1,13 +1,5 @@
-class Person
-  def initialize(name , family)
-    @name = name
-    @family = family
-  end
-  def to_s
-    " The full name of the object is #{@name} #{@family}."
-  end
-end
+a = "a string"
 
-person_1 = Person.new("Soroush","Khosravi")
+a.upcase!
 
-puts person_1
+puts a 
