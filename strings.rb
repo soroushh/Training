@@ -11,6 +11,4 @@ end
 
 person_1 = Person.new("b")
 
-person_2 = Person.new("c")
-
-puts person_1 > person_2
+p Person.instance_methods()
