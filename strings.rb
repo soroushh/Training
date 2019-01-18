@@ -1,14 +1,12 @@
-class Person
-  include Comparable
-  attr_reader :name
-  def initialize(name)
-    @name = name
-  end
-  def <=> sec
-    self.name <=> sec.name
-  end
-end
+a = "This is a string which is long enough to do a lot of things."
 
-person_1 = Person.new("b")
+p a[10..-1]
 
-p Person.instance_methods()
+p a[-5..-1]
+
+p a[0..10]
+
+
+
+
+
