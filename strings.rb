@@ -1,12 +1,6 @@
-a = "This is a string which is long enough to do a lot of things."
+string = "This is the original string"
 
-p a[10..-1]
+string.replace("This is the replaced")
 
-p a[-5..-1]
-
-p a[0..10]
-
-
-
-
+puts string
 
