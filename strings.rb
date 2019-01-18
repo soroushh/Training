@@ -1,5 +1,7 @@
-a = "a string"
+a = [1,2,3]
 
-a.upcase!
+def three_inputs(a,b,c)
+  puts "The first arg is #{a}, the second is #{b} and the third is #{c}."
+end
 
-puts a 
+three_inputs(*a)
