@@ -1,15 +1,14 @@
-ar = Array.new(3)
+ar = ["a","b","c","d","b"]
 
-p ar
+b = ["upcase", "downcase"]
 
-ar_1 = Array.new(3) { "soroush"  }
+p ar.sample(1)[0].send(b.sample(1)[0])
 
-p ar_1
+p ar.first(2)
 
-ar_2 = ["soroush", "farnaz"]
+p ar.last(1)
 
-p ar_2
+p ar.uniq
 
-ar[0].replace("hey") 
+p ar.count("b")
 
-p ar 
