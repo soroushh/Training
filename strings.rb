@@ -1,7 +1,11 @@
-a = [1,2,3]
+puts "Please enter the number"
 
-def three_inputs(a,b,c)
-  puts "The first arg is #{a}, the second is #{b} and the third is #{c}."
+begin
+  a = gets.chomp()
+  b = Integer(a)
+rescue
+  puts "The input should be an integer"
+  exit
 end
 
-three_inputs(*a)
+puts "The integer is #{b}"
