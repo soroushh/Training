@@ -1,13 +1,20 @@
-string = "a string"
+class Person
+  def initialize()
+    @hash = {}
+  end
+  def set_sport(a)
+    @hash[:sport] ||= []
+    @hash[:sport] << a
+  end
+  def show_sport
+    @hash[:sport]
+  end
+end
 
-puts string.respond_to?(:upcase)
+person = Person.new()
 
-puts string.methods.include?(:upcase)
+person.set_sport("a")
 
-puts string.send(:upcase)
+person.set_sport("b")
 
-puts string.send("upcase")
-
-puts string.respond_to?("upcase")
-
-puts string.methods.include?("upcase")
+p person.show_sport()
