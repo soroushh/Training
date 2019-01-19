@@ -1,15 +1,19 @@
 require 'set'
 
-ar = ["a","b","c","d","a"]
+set_1 = Set.new(["a","b"])
 
-set_1 = Set.new(ar){|x| x.upcase}
+set_2 = Set.new(["b", "c"])
 
-p set_1
+p set_1 - set_2
 
-set_1 << "E"
+p set_1 + set_2
 
-p set_1
+p set_2 | set_1
 
-set_1.delete("A")
+p set_1 & set_2
 
-p set_1
+p set_1 ^ set_2
+
+for i in set_1
+  puts i
+end
