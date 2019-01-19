@@ -1,7 +1,5 @@
-a = 1...10
+a = "a" .. "z"
 
-puts a.end
+p a.include?("best")
 
-puts a.begin
-
-p a.exclude_end?
+p a.cover?("best")
