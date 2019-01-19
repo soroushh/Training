@@ -1,5 +1,5 @@
-def hashing(a,b)
-  puts b["name"]
+def hash_arg(a,b, **c)
+  puts a , b , c
 end
 
-hashing("a","name"=>"soroush")
+hash_arg(1,2,f:10,g:20)
