@@ -2,18 +2,10 @@ require 'set'
 
 set_1 = Set.new(["a","b"])
 
-set_2 = Set.new(["b", "c"])
+ar = ["c","d"]
 
-p set_1 - set_2
+hash = { 1=>2}
 
-p set_1 + set_2
+p set_1.merge(ar)
 
-p set_2 | set_1
-
-p set_1 & set_2
-
-p set_1 ^ set_2
-
-for i in set_1
-  puts i
-end
+p set_1.merge(hash)
