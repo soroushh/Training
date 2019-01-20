@@ -1,14 +1,9 @@
-class Colors
-  include Enumerable
-  def each
-    yield("red")
-    yield("blue")
-  end
-end
+a = ["a","b","b","cd"]
 
-obj = Colors.new()
+p a.any?{|x| x =~ /a/}
 
-obj.each{
-  |x|
-  puts "The color is #{x}"
-}
+p a.one?{ |x| x =~ /b/}
+
+p a.none?{|x| x =~ /g/}
+
+p a.all?{|x| x =~ /[a-z]+/}
