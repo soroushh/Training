@@ -1,21 +1,16 @@
-hash = {
-  "a" => "b",
-  "c" => "d",
+a = ["a", "b", "c", "d", "e"]
+
+a.each_slice(3){
+  |x|
+  p x
 }
 
-hash.reverse_each{
-  |x,y|
-  puts y 
+a.each_cons(2){
+  |y|
+  p y
 }
 
-hash.each.with_index(1){
-  |(x,y),z|
-  puts "#{z} #{x} #{y} "
-}
-
-ar = ["a","b","c"]
-
-ar.each.with_index(1){
-  |x,y|
-  puts "#{y} #{x}"
+a.cycle(2){
+  |x|
+  p x 
 }
