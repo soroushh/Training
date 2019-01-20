@@ -1,9 +1,16 @@
-a = ["a","b","b","cd"]
+a = [1,2,3,4,8]
 
-p a.any?{|x| x =~ /a/}
+p a.find{
+  |x|
+  x%2 == 0
+}
 
-p a.one?{ |x| x =~ /b/}
+p a.find_all{
+  |x|
+  x%2 == 0 
+}
 
-p a.none?{|x| x =~ /g/}
-
-p a.all?{|x| x =~ /[a-z]+/}
+p a.find{
+  |x|
+  x % 6 == 0 
+}
