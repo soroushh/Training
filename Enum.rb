@@ -1,24 +1,14 @@
-lamb = lambda{
-  |x|
-puts x
-}
-
-pro = Proc.new{
-  |x,y|
-puts x*y
-}
-
 hash ={
-  1=> 2,
-  3=>4,
-  5=> 6,
+  "b"=>"c",
+  "a"=>"d",
+  "c"=> "g"
 }
 
-ar = [1,2,3]
-
-hash.each(&pro)
-
-puts "\n\n\n\n\n"
-
-ar.each(&lamb)
-
+h1 = hash.sort_by{
+  |x,y|
+  x
+}
+h1.each.with_index(1){
+  |(x,y),z|
+  puts "#{z}: #{x}=> #{y}"
+}
