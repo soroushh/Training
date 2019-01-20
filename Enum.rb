@@ -1,16 +1,19 @@
-a = [1,2,3,4,8]
-
-p a.find{
-  |x|
-  x%2 == 0
+hash ={
+  "a"=> "b",
+  "c" => "d",
+  "e" => "f",
+  "g" => "hi"
 }
 
-p a.find_all{
-  |x|
-  x%2 == 0 
+h1 = hash.find_all{
+  |x,y|
+  x > "b"
 }
 
-p a.find{
-  |x|
-  x % 6 == 0 
-}
+p h1.to_h
+
+h2 = hash.reject{
+  |a,b|
+  a > "b"
+} 
+p h2
