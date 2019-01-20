@@ -1,8 +1,24 @@
-a = {"a"=>"b", "c"=> "d"}
-
-b = a.map{
-  |x,y|
-  x + y
+lamb = lambda{
+  |x|
+puts x
 }
 
-p b 
+pro = Proc.new{
+  |x,y|
+puts x*y
+}
+
+hash ={
+  1=> 2,
+  3=>4,
+  5=> 6,
+}
+
+ar = [1,2,3]
+
+hash.each(&pro)
+
+puts "\n\n\n\n\n"
+
+ar.each(&lamb)
+
