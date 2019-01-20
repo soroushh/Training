@@ -1,16 +1,17 @@
-a = ["a", "b", "c", "d", "e"]
+a = {"a"=>"b", "c"=> "d"}
 
-a.each_slice(3){
-  |x|
-  p x
+injection = a.inject("added part"){
+  |x,(y,z)|
+  x + " : "+y
 }
 
-a.each_cons(2){
-  |y|
-  p y
+puts injection
+
+ar = ["a","b","c"]
+
+inj = ar.inject("Added part:"){
+  |x,y|
+  x + " : "+y
 }
 
-a.cycle(2){
-  |x|
-  p x 
-}
+puts inj 
