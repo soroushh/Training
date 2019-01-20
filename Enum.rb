@@ -5,15 +5,26 @@ hash ={
   "g" => "hi"
 }
 
-h1 = hash.find_all{
+h1 = hash.group_by{
   |x,y|
-  x > "b"
+  y.size()
 }
 
-p h1.to_h
+p h1 
 
-h2 = hash.reject{
-  |a,b|
-  a > "b"
-} 
-p h2
+ar = ["a", "b",1,"c","h"]
+
+b = ar.group_by{
+  |x|
+  x.class
+}
+
+p b 
+
+h2 = hash.partition{
+  |x,y|
+  x > "c"
+
+}
+
+p h2 
