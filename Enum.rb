@@ -1,22 +1,21 @@
-hash ={
-  "a"=> "b",
+hash = {
+  "a" => "b",
   "c" => "d",
-  "e" => "f",
-  "g" => "hi"
 }
 
-a = ["a", "b", "c","d"]
-
-p hash.take(3)
-
-p a.drop(2)
-
-p hash.take_while{
+hash.reverse_each{
   |x,y|
-  y < "d"
+  puts y 
 }
 
-p a.drop_while{
-  |x|
-  x < "c"
+hash.each.with_index(1){
+  |(x,y),z|
+  puts "#{z} #{x} #{y} "
+}
+
+ar = ["a","b","c"]
+
+ar.each.with_index(1){
+  |x,y|
+  puts "#{y} #{x}"
 }
