@@ -5,26 +5,18 @@ hash ={
   "g" => "hi"
 }
 
-h1 = hash.group_by{
+a = ["a", "b", "c","d"]
+
+p hash.take(3)
+
+p a.drop(2)
+
+p hash.take_while{
   |x,y|
-  y.size()
+  y < "d"
 }
 
-p h1 
-
-ar = ["a", "b",1,"c","h"]
-
-b = ar.group_by{
+p a.drop_while{
   |x|
-  x.class
+  x < "c"
 }
-
-p b 
-
-h2 = hash.partition{
-  |x,y|
-  x > "c"
-
-}
-
-p h2 
