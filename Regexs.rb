@@ -1,15 +1,18 @@
-name = "soroush KHOSRAVI"
+str = "this is a string with several lines.\n This is the second line.\n This is the third line."
 
-reg1 = /([A-Z]{7})/
+re =/\w+\.$/
 
-reg2 = /([A-Z]{2,8})/
+re2 =/^\s\w+/
 
-reg3 =/([A-Z]){7}/
+re3=/\b\w\b/
 
-p reg1.match(name)[1]
+re4 = /\w+\.\Z/
 
-p reg2.match(name)[1]
+p str.match(re)[0]
 
-p reg3.match(name)[1]
+p str.match(re2)[0]
 
+p str.match(re3)[0]
+
+p str.match(re4)[0]
 
