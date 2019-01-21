@@ -1,18 +1,16 @@
-name = "Mr, Soroush , Khosravi"
+name = "Mr, Soroush , Khosravi is the first person. Mrs , farnaz ,   Ostovari is the second person."
 
-a = name.match(/(Mrs?)\s*,*\s*([a-zA-Z]+)\s*,*\s*([a-zA-Z]+)/)
+ar = name.match(/(Mrs?)\s*,*\s*([a-zA-Z]+)\s*,*\s*([a-zA-Z]+)/)
 
-p a 
+puts ar.captures[0]
 
-p a[1]
+puts ar[0]
 
-p a[2]
+puts ar[1]
 
-p a[3]
+puts ar[2]
 
-p $1
+puts ar[3]
 
-p $2
+puts ar.captures[1]
 
-
-p $3
