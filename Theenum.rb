@@ -1,18 +1,32 @@
-class Person
-  include Enumerable
-  def initialize(name)
-    @name = name
-  end
-  def each
-    yield @name
-  end
-end
+ar = ["a", "b", "c", "d", "e"]
 
-per = Person.new("soroush")
+enum = ar.enum_for(:select)
 
-a = per.select{
+sel = enum.each{
   |x|
+  x > "b"
+}
+
+p sel
+
+enum_2 = ar.enum_for(:collect)
+
+col = enum_2.each{
+  |x|
+  x*2
+}
+
+p col 
+
+hash = {"a"=>"b",
+  "c"=> "d",
+}
+
+enum_3 = hash.enum_for(:select)
+
+ha = enum_3.each{
+  |x,y|
   x > "a"
 }
 
-p a 
+puts ha
