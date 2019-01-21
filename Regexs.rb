@@ -1,3 +1,3 @@
-p "a String".match(/\s[a-z]{5}/)
+a = "This is string with a dot(.) in it.\n line."
 
-p "a String".match(/\s[A-Z][a-z]{5}/)
+p a.match(/(.line)/)
