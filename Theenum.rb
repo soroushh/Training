@@ -1,12 +1,9 @@
-hash = {
-	"b"=> "c",
-  "a" => "d",
-  "c"=> "p",
-}
+e = Enumerator.new do |x|
+  x<<"soroush khosravi."
+  x<< "farnaz ostovari"
+end
 
-b = hash.sort_by{
-  |x,y|
-  x
+e.each{
+  |y|
+  puts y
 }
-
-p b 
