@@ -1,14 +1,15 @@
-reg1 = /.+\d/
+name = "soroush KHOSRAVI"
 
-reg2 = /.+?\d/
+reg1 = /([A-Z]{7})/
 
-str = "12 35"
+reg2 = /([A-Z]{2,8})/
 
-p str.match(reg1)[0]
+reg3 =/([A-Z]){7}/
 
-p str.match(reg2)[0]
+p reg1.match(name)[1]
 
+p reg2.match(name)[1]
 
-
+p reg3.match(name)[1]
 
 
