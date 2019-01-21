@@ -1,14 +1,18 @@
-ar = [1,2,3]
-
-e = Enumerator.new do |x|
-  sum = 0
-  until ar.size == 0
-    sum += ar.shift()
-    x << sum
+class Person
+  include Enumerable
+  def initialize(name)
+    @name = name
+  end
+  def each
+    yield @name
   end
 end
 
-e.each{
+per = Person.new("soroush")
+
+a = per.select{
   |x|
-  puts x 
+  x > "a"
 }
+
+p a 
