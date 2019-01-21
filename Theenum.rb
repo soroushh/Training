@@ -1,9 +1,10 @@
-names = %w{Soroush Farnaz Rostam Katayoun}
+a = ["a","b","c","d"]
 
-a = names.select
+enum = a.to_enum(:select)
 
-p a 
-
-b = names.enum_for(:select)
+b = enum.each{
+  |x|
+  x > "b"
+}
 
 p b 
