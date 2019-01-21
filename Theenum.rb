@@ -1,10 +1,9 @@
 names = %w{Soroush Farnaz Rostam Katayoun}
 
-e = names.enum_for(:inject, "Names...")
+a = names.select
 
-a = e.each{
-  |x,y|
-  x + y + "..."
-}
+p a 
 
-puts a
+b = names.enum_for(:select)
+
+p b 
