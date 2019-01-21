@@ -1,9 +1,14 @@
+ar = [1,2,3]
+
 e = Enumerator.new do |x|
-  x<<"soroush khosravi."
-  x<< "farnaz ostovari"
+  sum = 0
+  until ar.size == 0
+    sum += ar.shift()
+    x << sum
+  end
 end
 
 e.each{
-  |y|
-  puts y
+  |x|
+  puts x 
 }
