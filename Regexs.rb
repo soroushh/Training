@@ -1,29 +1,12 @@
-reg = /Mrs?\.?\s?/
+reg1 = /.+\d/
 
-p reg.match("Mr")
+reg2 = /.+?\d/
 
-p reg.match("Mrs")
+str = "12 35"
 
+p str.match(reg1)[0]
 
-p reg.match("Mr.")
-
-p reg.match("Mrs.")
-
-r2 = /[a-z]\s*[a-z]/
-
-p r2.match("ab")
-
-p r2.match("a b")
-
-p r2.match("a   b")
-
-r3=/[a-z]\s+[a-z]/
-
-p r3.match("ab")
-
-p r3.match("a b")
-
-p r3.match("a   b")
+p str.match(reg2)[0]
 
 
 
