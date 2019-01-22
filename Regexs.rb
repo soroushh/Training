@@ -1,7 +1,5 @@
-str = " I am Mr.soroush khosravi and my wife is Mrs.farnaz ostovari."
+str = " I am Mr.soroush khosravi and ,my wife is Mrs.farnaz ostovari."
 
-regexp =/Mrs?\s*\.\s*(\w+)\s*(\w+)/
+array = str.split(/\.|,|a/)
 
-ar = str.scan(regexp)
-
-p ar 
+p array
