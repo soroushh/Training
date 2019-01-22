@@ -1,15 +1,6 @@
-string = "(a parentheses \n including multiline text.) we want to take the parentheses."
+string = "line one.\n line two..\nline three."
 
-re1 = /\(.*?\)/i
+p string.match(/.+\.\.$/)[0]
 
-re2 = /\(.*?\)/m
-
-p re1.match(string)
-
-p re2.match(string)
-
-
-p re2.match(string)[0]
-
-
+p string.match(/^[l].+/)[0]
 
