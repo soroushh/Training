@@ -1,19 +1,13 @@
-str = "soroush khosravi telephone number is 0098 .353 8212579."
+re1 =/(a)?(?(1)b|c)/
 
-re1 =/(?<=0098\s)(\.\d{3})/
+re2 = /(?<name>a)?(?(<name>)b|c)/
 
-re2 = /(\.\d{3})(?=\s\d+)/
+p re1.match("ab")
 
-re3 = /(\w+)\s(?:\w+)\s(\w+)/
+p re1.match("b")
 
-p str.match(re1)[0]
+p re1.match("ac")
 
-p str.match(re2)[0]
-
-p str.match(re3)[0]
-
-p str.match(re3)[1]
-
-p str.match(re3)[2]
+p re1.match("c")
 
 
