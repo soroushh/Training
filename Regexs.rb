@@ -1,13 +1,21 @@
-string = "li(ne (one.\n line two)..\nline three."
+str = "def"
 
-reg = /\(.+\)/
+re = /abc\s#{str}/
 
-reg2 =/\(.+?\)/m
+p re
 
-p reg.match(string)
+str2 = "a.c"
 
-p reg2.match(string)
+re2 = /abc\s#{str2}/
 
-p reg2.match(string)[0]
+p re2
 
+re3 = /#{Regexp.escape(str2)}/
 
+p re3
+
+p re3.match("a.c")
+
+re4 = Regexp.new("abc def")
+
+p re4
