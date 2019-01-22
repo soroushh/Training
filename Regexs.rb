@@ -1,21 +1,7 @@
-str = "def"
+str = " I am Mr.soroush khosravi and my wife is Mrs.farnaz ostovari."
 
-re = /abc\s#{str}/
+regexp =/Mrs?\s*\.\s*(\w+)\s*(\w+)/
 
-p re
+ar = str.scan(regexp)
 
-str2 = "a.c"
-
-re2 = /abc\s#{str2}/
-
-p re2
-
-re3 = /#{Regexp.escape(str2)}/
-
-p re3
-
-p re3.match("a.c")
-
-re4 = Regexp.new("abc def")
-
-p re4
+p ar 
