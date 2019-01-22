@@ -1,13 +1,15 @@
-re1 =/(a)?(?(1)b|c)/
+string = "(a parentheses \n including multiline text.) we want to take the parentheses."
 
-re2 = /(?<name>a)?(?(<name>)b|c)/
+re1 = /\(.*?\)/i
 
-p re1.match("ab")
+re2 = /\(.*?\)/m
 
-p re1.match("b")
+p re1.match(string)
 
-p re1.match("ac")
+p re2.match(string)
 
-p re1.match("c")
+
+p re2.match(string)[0]
+
 
 
