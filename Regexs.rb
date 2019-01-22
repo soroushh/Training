@@ -1,6 +1,13 @@
-string = "line one.\n line two..\nline three."
+string = "li(ne (one.\n line two)..\nline three."
 
-p string.match(/.+\.\.$/)[0]
+reg = /\(.+\)/
 
-p string.match(/^[l].+/)[0]
+reg2 =/\(.+?\)/m
+
+p reg.match(string)
+
+p reg2.match(string)
+
+p reg2.match(string)[0]
+
 
