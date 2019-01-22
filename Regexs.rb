@@ -1,5 +1,8 @@
 str = " I am Mr.soroush khosravi and ,my wife is Mrs.farnaz ostovari."
 
-array = str.split(/\.|,|a/)
+str.gsub!(/soroush/){
+  |x|
+  x.upcase
+}
 
-p array
+p str
