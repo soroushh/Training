@@ -1,6 +1,3 @@
-puts "please enter the input."
+fh = File.new("ranges.rb")
 
-inp = STDIN.getc
-
-p inp
-
+p fh.read()
