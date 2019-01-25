@@ -1,6 +1,12 @@
-a = STDIN.select{
-  |x|
-  x =~ /^[A-Z]/
-}
+record = File.open("new","w")
 
-p a 
+old_stdout = $stdout
+
+$stdout = record
+
+$stderr = $stdout
+
+puts "This is a record"
+
+z = 10/0
+
