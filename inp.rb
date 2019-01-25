@@ -1,16 +1,15 @@
-def inp()
-  students = []
-  while true
-    puts "name?"
-    name = gets.chomp
-    if name == ""
-      break
-    else
-      students.push({})
-      students[students.size()-1][:name]=name
-    end
-  end
-  return students
+def generate_shape(5)
+  i=
+  str=""
+  while i <= n
+   if i == n
+     str += "+"*n
+   else
+   str += "+"*n+"\n"
+   end
+   i+=1
+  end 
+  return str
 end
 
-p inp()
+puts generate_shape(5)
