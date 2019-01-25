@@ -1,6 +1,6 @@
-$/ = "me"
-
-STDIN.each{
-  |line|
-  p line
+a = STDIN.select{
+  |x|
+  x =~ /^[A-Z]/
 }
+
+p a 
