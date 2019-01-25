@@ -1,12 +1,6 @@
-record = File.open("new","w")
+puts "please enter the input."
 
-old_stdout = $stdout
+inp = STDIN.getc
 
-$stdout = record
-
-$stderr = $stdout
-
-puts "This is a record"
-
-z = 10/0
+p inp
 
