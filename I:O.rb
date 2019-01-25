@@ -1,5 +1,6 @@
-p STDERR.class
+$/ = "me"
 
-p STDERR.puts("Problem")
-
-p STDERR.write("Problem\n")
+STDIN.each{
+  |line|
+  p line
+}
