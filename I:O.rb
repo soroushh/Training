@@ -1,3 +1,7 @@
 fh = File.new("ranges.rb")
 
-p fh.read()
+fh.each.with_index(1){
+  |x,y|
+  puts "line #{y}: #{x}"
+}
+
