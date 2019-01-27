@@ -24,7 +24,9 @@ end
 def print(students)
   students.each.with_index(1){
     |x,y|
-    puts "#{y}.#{x[:name]}"
+    if x[:name].match(/^[SsFf]/)
+      puts "#{y}. #{x[:name]}"
+    end
   }
 end
 def print_footer(names)
