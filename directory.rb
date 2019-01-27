@@ -22,11 +22,10 @@ def print_header
   puts "-------------"
 end
 def print(students)
-  students.each do |student|
-    if student[:name].size <12
-      puts "#{student[:name]} (#{student[:cohort]} cohort)"
-    end
-  end
+  students.each.with_index(1){
+    |x,y|
+    puts "#{y}.#{x[:name]}"
+  }
 end
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
