@@ -22,12 +22,9 @@ def print_header
   puts "-------------"
 end
 def print(students)
-  students.each.with_index(1){
-    |x,y|
-    if x[:name].length()<12
-      puts "#{y}. #{x[:name]}"
-    end
-  }
+  while students.size()>0
+    puts students.shift()[:name]
+  end
 end
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
