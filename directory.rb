@@ -5,7 +5,7 @@ def input_students
   #create an empty array
   students = []
   while true
-    name = gets.chomp()
+    name = gets.chop()
     if name.empty?
       break
     end
