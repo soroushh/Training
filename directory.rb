@@ -21,12 +21,18 @@ def print_header
   puts "-------------"
 end
 def print(students)
-  i=0
-  j = students.size()
-  while i<j
-    puts students[i][:name]+ "  "+ students[i][:hobby]
-    i+=1
-  end
+  list_of_hobbies = students.map{ |x|
+  x[:hobby] }.uniq
+  list_of_hobbies.each{ |x|
+  puts "students with #{x} hobby:"
+  students.each{|y|
+  if y[:hobby]==x
+    puts y[:name]
+  end }
+}
+
+
+
 end
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
