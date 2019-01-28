@@ -25,7 +25,7 @@ def print(students)
   i=0
   j = students.size()
   while i<j
-    puts students[i][:name]
+    puts students[i][:name].center(20,"_")
     i+=1
   end
 end
