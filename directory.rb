@@ -24,7 +24,7 @@ end
 def print(students)
   students.each.with_index(1){
     |x,y|
-    if x[:name].match(/^[SsFf]/)
+    if x[:name].length()<12
       puts "#{y}. #{x[:name]}"
     end
   }
