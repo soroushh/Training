@@ -11,7 +11,11 @@ def input_students
     end
     hobby = gets.chomp()
     students << {:name=>name , :hobby => hobby}
-    puts "we have #{students.size()} students."
+    if students.size()==1
+      puts "We have #{students.size()} students."
+    else
+      puts "We have #{students.size()} students."
+    end
   end
   #return the array of students
   students
