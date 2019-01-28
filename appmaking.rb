@@ -7,6 +7,7 @@ def operation_taking()
 end
 
 def iput()
+  ar = []
   puts "Pleas enter the name of students and two returns at the end"
   
   while true
@@ -14,8 +15,9 @@ def iput()
     if name == ""
       break
     end
-    @all << {name: name}
+     ar<< {name: name}
   end
+  ar
 end
 
 def showing(names)
@@ -24,25 +26,20 @@ def showing(names)
     puts x[:name]
   }
 end
-def process(x)
-  case x
+
+def app
+  total_ar = []
+  while true
+  operation_taking()
+  a = gets.chomp()
+  case a
   when "1"
-    iput
+    total_ar += iput
   when "2"
-    showing(@all)
+    showing(total_ar)
   when "3"
     exit
   end
 end
-
-
-
-
-
-def app
-  while true
-    operation_taking
-    process(gets.chomp)
-  end
 end
 app
