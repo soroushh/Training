@@ -19,6 +19,14 @@ def input(ar=[])
     puts "We have #{ar.count} persons."
   end
 end
+
+def showing(ar=[])
+  ar.each{
+    |x|
+    puts "#{x[:name]} #{x[:family]}."
+  }
+end
+
 def interactive_app()
   ar = []
   while true
@@ -26,6 +34,8 @@ def interactive_app()
     option = gets.chomp
     if option == "1"
       input(ar)
+    elsif option == "2"
+      showing(ar)
     elsif option =="5"
       exit
     end
