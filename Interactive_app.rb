@@ -20,6 +20,21 @@ def input(ar=[])
   end
 end
 
+def laoding_from_file(ar, file_name)
+  fh = File.open(file_name,"r")
+  fh.readlines.each{
+    |line|
+    name,family = line.chomp.split(",")
+    ar << {name: name, family: family}
+  }
+  fh.close()
+end
+
+
+
+
+
+
 def showing(ar=[])
   ar.each{
     |x|
@@ -48,6 +63,8 @@ def interactive_app()
       showing(ar)
     elsif option =="3"
       writing_to_file(ar)
+    elsif option == "4"
+      laoding_from_file(ar,"people.csv")
     elsif option =="5"
       exit
     end
