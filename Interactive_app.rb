@@ -27,6 +27,16 @@ def showing(ar=[])
   }
 end
 
+def writing_to_file(ar=[])
+  fh = File.open("people.csv","w")
+  ar.each{
+    |x|
+    fh.puts "#{x[:name]},#{x[:family]}"
+  }
+  fh.close()
+end
+
+
 def interactive_app()
   ar = []
   while true
@@ -36,6 +46,8 @@ def interactive_app()
       input(ar)
     elsif option == "2"
       showing(ar)
+    elsif option =="3"
+      writing_to_file(ar)
     elsif option =="5"
       exit
     end
