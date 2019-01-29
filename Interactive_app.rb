@@ -9,12 +9,12 @@ end
 def input(ar=[])
   while true
     puts "Please enter the name. If finished, press the return."
-    name = gets.chomp()
+    name = STDIN.gets.chomp()
     if name ==""
       break
     end
     puts "Please enter the family."
-    family = gets.chomp()
+    family = STDIN.gets.chomp()
     ar << {name: name, family: family}
     puts "We have #{ar.count} persons."
   end
@@ -51,12 +51,28 @@ def writing_to_file(ar=[])
   fh.close()
 end
 
+def try_loading(ar)
+  if ARGV.first.nil?
+    return
+  end
+  name = ARGV[0]
+  if File.exists?(name)
+    laoding_from_file(ar,name)
+  else
+    puts "Sorry, the file does not exist."
+    exit
+  end
+end
+
+
+
 
 def interactive_app()
   ar = []
+  try_loading(ar)
   while true
     print_menu
-    option = gets.chomp
+    option = STDIN.gets.chomp
     if option == "1"
       input(ar)
     elsif option == "2"
