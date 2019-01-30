@@ -1,3 +1,3 @@
 def greet(a)
-  "Hello, Rico, how are you?"
+  "Hello, #{a}, how are you?"
 end
