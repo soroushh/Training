@@ -1,4 +1,4 @@
-def argv_showing
+def argv_show
   
   p ARGV
 
@@ -12,7 +12,7 @@ def argv_showing
   }
 end
 
-argv_showing
+argv_show
 
 
 
