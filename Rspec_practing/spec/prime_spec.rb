@@ -1,4 +1,4 @@
-require Prime.rb
+require "Prime"
 describe "priming" do
   it "returns prime if passed 3" do
     expect(prime(3)).to eq "prime"
