@@ -1,12 +1,9 @@
 class Person
-  NAME = "soroush"
-  def printing()
-    puts NAME
+  def method_missing(a,*b)
+    puts " The method named #{a} with arguments #{b} does not exist."
   end
 end
 
 person= Person.new()
 
-person.printing()
-
-puts Person::NAME
+person.unkonwn("a","b")
