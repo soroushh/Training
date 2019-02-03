@@ -10,6 +10,6 @@ class Person
   end
 end
 
-per1 = Person.new("soroush","khosravi","ping_pong")
+per1 = Person.new("soroush","khosravi")
 
 p Person.all()
