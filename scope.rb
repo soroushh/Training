@@ -1,14 +1,12 @@
-a = "Hello"
-
-b = a
-
-puts b
-
-def rep(a)
-  a.replace("hi")
+class Person
+  NAME = "soroush"
+  def printing()
+    puts NAME
+  end
 end
-rep(b)
 
-puts b 
+person= Person.new()
 
-puts a 
+person.printing()
+
+puts Person::NAME
