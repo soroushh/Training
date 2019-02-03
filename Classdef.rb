@@ -1,4 +1,5 @@
 class Person
+  attr_accessor :family
   def initialize(*a)
     @name = a[0]
     @family = a[1]
@@ -13,3 +14,11 @@ end
 per1 = Person.new("soroush","khosravi")
 
 p Person.all()
+
+p per1.family()
+
+per1.family = "ostovari"
+
+p Person.all()
+
+p per1.family()
