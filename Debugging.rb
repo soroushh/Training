@@ -1,13 +1,26 @@
-def factorial(n)
-  product = 1
-  p "at the start product is #{product}"
-  while n > 1
-    p "we multiply #{product} by #{n}"
-    product *= n
-    p "we get #{product}"
-    n -= 1
+def encode(plaintext, key)
+  cipher = key.chars.uniq + (('a'..'z').to_a - key.chars)
+  puts "The cipher is #{cipher}"
+  ciphertext_chars = plaintext.chars.map do |char|
+    (65 + cipher.find_index(char)).chr
   end
-  product
+  puts "The ciphertext_chars is #{ciphertext_chars}"
+  ciphertext_chars.join
 end
 
-factorial(5)
+def decode(ciphertext, key)
+  cipher = key.chars.uniq + (('a'...'z').to_a - key.chars)
+  plaintext_chars = ciphertext.chars.map do |char|
+    cipher[65 - char.ord]
+  end
+  plaintext_chars.join
+end
+
+# Intended output:
+#
+# > encode("theswiftfoxjumpedoverthelazydog", "secretkey")
+# => "EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL"
+#
+# > decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
+# => "theswiftfoxjumpedoverthelazydog"
+encode("theswiftfoxjumpedoverthelazydog", "secretkey")
