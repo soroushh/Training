@@ -37,3 +37,5 @@ user = User.new("soroush","khosravi",30,"f8212579")
 p user.authenticate("f8212579")
 
 p user.authenticate("asd")
+
+
