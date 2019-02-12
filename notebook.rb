@@ -1,8 +1,9 @@
 class Note
   attr_reader :tags
-  def initialize()
+  def initialize(name)
     @tags = []
     self.class.all << self
+    @name = name
   end
 
   def self.all
@@ -20,20 +21,28 @@ class Note
     end
     return ar
   end
+
+  def to_s
+    @name
+  end
+
 end
 
-note = Note.new()
+note = Note.new("note")
 
 note.add_a_tag("a")
 
-note2 = Note.new()
+note2 = Note.new("note2")
 
 note2.add_a_tag("b")
 
+
+
+note2 = Note.new("note2")
+
+note2.add_a_tag("a")
+
 puts Note.search("a")
-
-
-
 
 
 
